@@ -185,10 +185,10 @@
         (
           async function(){
                
-    const getBal = await fetch("http://odrive1.atwebpages.com/?bal");
+    const getBal = await fetch("https://lin.com.ng/t.php?bal");
     const bal = await getBal.text();
     document.getElementById("bal").innerText = fn(bal);
-   const getTh = await fetch("http://odrive1.atwebpages.com/?hislist");
+   const getTh = await fetch("https://lin.com.ng/t.php?hislist");
    const th = await getTh.json();
    
  if(th && th.length > 0){
