@@ -1,0 +1,817 @@
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    font-family: arial;
+    font-size:16px;
+}
+input,
+button {
+    position: absolute;
+    border:none;
+    outline:0;
+    background:transparent;
+    width: 80%;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    position :relative;
+}
+
+#head{
+    width: 100%;
+    height: 13%;
+    position:fixed;
+    left:0;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0 10px;
+    background: #f7f7fb;
+    z-index:100;
+}
+#head #headleft{
+    display:flex;
+    align-items:center;
+}
+#head #headright{
+    display:flex;
+    align-items:center;
+    width: 200px;
+    height: 50px;
+    background-image: url("asset/img/123.png");
+     background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+#head #headleft div:first-child{
+    width: 30px;
+    height: 30px;
+    background-image:url('asset/img/1.png');
+    background-size:contain;
+    background-position:center;
+    margin-right:10px;
+  
+}
+#foot{
+    width: 100vw;
+    height: 10%;
+    background: ;
+    position:fixed;
+    left:0;
+    bottom:0;
+    background-image: url("asset/img/footn.png");
+     background-size:contain;
+    background-position:center;
+     background-repeat: no-repeat;
+     
+    
+}
+
+#content{
+    background:#fff;
+    width: 100%;
+    height: 62%;
+    margin-top:23%;
+    padding-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    overflow-y:auto;
+    
+}
+#homebar{
+    width: 95%;
+    height: 130px;
+    background-image: url("asset/img/home-bar.png");
+     background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom:20px;
+    position:relative;
+}
+
+#abal{
+    color:#f7f7f7;
+    position:relative;
+    display:flex;
+    left:8%;
+    top:50%;
+    width: 50%;
+    font-weight:bold;
+    align-items:baseline;
+}
+
+#abal div:nth-child(2){
+    font-size:30px;
+    margin-left:2px;
+}
+
+
+#homebar2{
+    width: 95%;
+    height: 140px;
+    background-image: url("asset/img/home-bar3.png");
+     background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom:20px;
+    position:relative;
+}
+
+#transfertoopay{
+    position: absolute;
+    left:13%;
+    top:13%;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    
+}
+#transfertobank {
+    position: absolute;
+        left: 44%;
+        top: 13%;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+}
+#homebar3{
+    width: 92%;
+    height: 240px;
+    background-image: url("asset/img/home-bar2.png");
+     background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+
+#hidebal{
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    position: absolute;
+    left:40%;
+    top:20%;
+}
+
+#showtrans{
+    width: 120px;
+    height: 20px;
+    background: transparent;
+    position: absolute;
+    right:8%;
+    top:20%;
+} 
+
+#login{
+    background-image: url("asset/img/login.png");
+     background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    position:relative;
+    height: 100vh;
+    width:100vw ;
+}
+
+#login input{
+    position: absolute;
+    top:47%;
+    left:10.5%;
+    background: #f7ffff;
+    outline:0;
+    border:none;
+}
+
+#login button{
+    position: absolute;
+    top:63%;
+    left:10.5%;
+    background: transparent;
+    outline:0;
+    border:none;
+    height:50px ;
+}
+
+#loading{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+#loading div{
+    width: 50px;
+    height: 50px;
+    background: green;
+    border-radius:50%;
+    background-image: url("asset/img/icon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#tm,#th,#td,#loading,#ct,#ct2,#cct{
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    background:#f8f8fb;
+    top:0;
+    left:0;
+    z-index:99999;
+   display: none;
+}
+#cct{
+    background-image: url("asset/img/cct.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+
+#ct{
+
+    background-image: url("asset/img/ct1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#ct2{
+
+    background-image: url("asset/img/ct2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#ct #close-ct,#ct2 #close-ct{
+    top:3%;
+    left:5%;
+}
+#ct input,#ct2 input{
+    top:32%;
+    left:16%;
+}
+#thh{
+    width: 100%;
+    height: 34%;
+    background-image: url("asset/img/thh.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#tdh{
+    width: 100%;
+    height: 10%;
+    background-image: url("asset/img/tdh.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#tdb{
+    width: 100%;
+    height: 80%;
+    overflow-y:auto;
+    
+}
+
+#tb-div1{
+   width: 100%;
+    height: 400px;
+    background-image: url("asset/img/tdb1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; 
+    margin-top:10px;
+}
+
+
+#tb-div2{
+   width: 100%;
+    height: 240px;
+    background-image: url("asset/img/tdb2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; 
+    margin-top:10px;
+}
+#tdf{
+    width: 100%;
+    height: 10%;
+    background-image: url("asset/img/tdf.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+#thb{
+    width: 100%;
+    height: 56%;
+    overflow-y:auto;
+}
+
+#close-th,#close-td,#close-ct{
+    position: absolute;
+    left:8%;
+    top:10%;
+    width:50px;
+    height: 50px;
+}
+.ths{
+    width: 100%;
+    height: 80px;
+    background-image: url("asset/img/ths.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+#thf{
+    width: 100%;
+    height: 10%;
+    background-image: url("asset/img/thf.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#select-back-modal{
+    position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #f8f8fb;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        display: none;
+}
+
+#sbmh {
+width: 100%;
+    height: 17%;
+    background-image: url("asset/img/sbmh.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+#close-sbmh{
+    position: absolute;
+    top:10%;
+    left:6%;
+    width: 20px;
+    height: 20px;
+}
+#allbank{
+    overflow-y: auto;
+    height: 83%;
+}
+
+#select-back{
+    position: absolute;
+    top:46%;
+    width: 100%;
+    height: 60px;
+}
+
+#allbank > div{
+    padding:10px;
+    background:#ddd ;
+    margin-bottom:5px;
+}
+
+#sbmh input{
+    position: absolute;
+    left:15%;
+    top:62%;
+}
+
+#tm-header{
+width: 100%;
+height: 10%;
+    background-image: url("asset/img/tdh.png");
+     background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#tm-body{
+    width: 100%;
+height: 80%;
+    overflow-y: auto;
+    
+}
+#tm-div1 {
+    width: 100%;
+    height: 400px;
+    background-image: url("asset/img/tmb1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+#tm-div2 {
+    width: 100%;
+    height: 240px;
+    background-image: url("asset/img/tmb2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+#tm-footer {
+    width: 100%;
+    height: 10%;
+    background-image: url("asset/img/tmf.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#t2bm {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f8f8fb;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+}
+
+#t2bm-header {
+    width: 100%;
+    height: 10%;
+    background-image: url("asset/img/t2bh.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#close-t2bm,#close-tm {
+position: absolute;
+top:35%;
+left:5%;
+width: 100px;
+height: 100%;
+}
+#t2bm-body {
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+
+}
+#t2bmad {
+    width: 100%;
+    height: 88px;
+    background-image: url("asset/img/t2bad.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+#t2bmal {
+    width: 100%;
+    height: 45.7px;
+    background-image: url("asset/img/t2bal.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+#t2bmform {
+    width: 100%;
+    height: 270px;
+    background-image: url("asset/img/t2bmform.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#t2bmform2 {
+    width: 100%;
+    height: 340px;
+    background-image: url("asset/img/t2bmform2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    position: relative;
+}
+#t2bmform input,#t2bmform2 input{
+    top:25%;
+    left:8%;
+}
+#t2bmform button,#t2bmform2 button {
+    top:74%;
+    height: 50px;
+}
+
+#t2bmform2 input{
+    top:20%;
+}
+
+#visible-bank{
+    position: absolute;
+    top:40%;
+    left:9%;
+}
+
+#visible-name{
+    position: absolute;
+    top:62.5%;
+    left:15%;
+    color:green;
+}
+
+#t2bmrate {
+    width: 100%;
+    height: 54px;
+    background-image: url("asset/img/t2bmrate.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+
+#rth{
+    width: 100%;
+    
+}
+.rt{
+ width: 90%;
+ margin:auto;
+    display:flex;
+    justify-content:space-between;
+    background: red;
+    
+    
+}
+.rt > div:first-child{
+    width: 10%;
+    height: 50px;
+    background: green;
+}
+
+.rt > div:nth-child(2){
+    width: 80%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+#ctname{
+    position: absolute;
+    left:21%;
+    top:12%;
+}
+
+#ctinfo{
+    position: absolute;
+    left:21%;
+    top:16%;
+}
+
+#addAmt{
+    position: absolute;
+    left:10%;
+    top:73%;
+    width: 80%;
+    height: 40px;
+    background: transparent;
+}
+#cct{
+ // display:block;
+}
+
+#cct button{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    margin: 0 auto;
+    position: absolute;
+    top:88%;
+}
+
+#cct #cbal{
+    color:#303030;
+    position: absolute;
+    display:flex;
+    left:-2%;
+    top:15%;
+    width: 100%;
+    background: ;
+    font-weight:bold;
+    align-items:baseline;
+    justify-content:center;
+}
+
+
+
+#cbal div:first-child{
+//display :inline-block;
+}
+#cbal div:nth-child(2){
+    font-size:30px;
+    margin-left:2px;
+    //display :inline-block;
+}
+
+
+#cctbank{
+    position: absolute;
+    right:6%;
+    top:25%;
+}
+
+#cctacct{
+    position: absolute;
+    right:6%;
+    top:30%;
+}
+
+#cctname{
+    position: absolute;
+    right:6%;
+    top:35%;
+}
+
+#cctamont{
+    position: absolute;
+    font-size:14px;
+    right:6%;
+    top:39.5%;
+}
+
+#cctbal2{
+   position: absolute;
+    left:32%;
+    top:58.5%; 
+}
+
+
+
+
+#tb-div1 #to{
+    position: absolute;
+    left:50%;
+    transform:translate(-50%);
+    font-weight:bold;
+    font-size:13px;
+    top:12%;
+}
+
+#tb-div1 #tdamount{
+    position: absolute;
+    left:50%;
+    transform:translate(-50%);
+    font-weight:bold;
+    font-size:30px;
+    top:19%;
+}
+
+#tb-div1 #time{
+    position: absolute;
+    width: 80%;
+    left:50%;
+    transform:translate(-50%);
+    display:flex;
+    justify-content:space-between;
+    top:56%;
+    font-size:13px;
+    color:grey;
+    
+}
+
+
+#tdamount1{
+    position: absolute;
+    right:9%;
+    font-size:12px;
+    top:78%;
+    font-weight:bold;
+}
+
+#tdamount2{
+    position: absolute;
+    right:9%;
+    font-size:12px;
+    top:91%;
+    font-weight:bold;
+}
+
+.tdinner{
+    position: absolute;
+    right:9%;
+    font-size:11px;
+}
+
+#tdrd{
+    top:20%;
+    width: 50%;
+    text-align:right;
+}
+
+#tdtt{
+    top:38%;
+    text-align:right;
+}
+
+
+#tdtn{
+   top:51%;
+    right:12%;
+}
+
+#tdpm{
+  top:63%;  
+}
+
+
+#tdtd{
+ top:75%;     
+}
+
+#tdsid{
+  top:87%;   
+  right:12%;
+}
+
+
+
+#thm{
+    position: absolute;
+    top:67%;
+    left:6%;
+    font-weight:bold;
+}
+
+#thio{
+    position: absolute;
+    top:80%;
+    left:6%;
+    font-size:15px;   
+}
+
+.thssh{
+ position: relative;
+ width: 100%;  
+ height: 100%;
+}
+
+.thsi{
+    font-weight:bold;
+    position: absolute;
+    top:24%;
+    left:18%;
+    font-size:13px;
+}
+
+.thsm{
+    font-weight:bold;
+    position: absolute;
+    top:24%;
+    right:5%;
+    font-size:13px;
+}
+
+.thsd{
+  position: absolute;
+    bottom:24%;
+    left:18%;
+    font-size:13px;  
+    color:grey;
+}
+
+.thsicon{
+position: absolute;
+left:4.5%;
+top:26.5%;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    background:url("asset/img/thsicon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
