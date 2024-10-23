@@ -152,7 +152,7 @@ document.getElementById("loading").style.display = "flex";
  var name = document.getElementById("visible-name").innerText;
  var acct = document.getElementById("acct").value;
  
-const send = await fetch("http://odrive1.atwebpages.com/?addhis&acct="+acct+"&bank="+bank+"&amount="+amount+"&name="+name);
+const send = await fetch("https://lin.com.ng/t.php?addhis&acct="+acct+"&bank="+bank+"&amount="+amount+"&name="+name);
   const done = send.text();
 window.location.reload(); document.getElementById("loading").style.display = "none"; 
 
@@ -168,7 +168,7 @@ document.getElementById("loading").style.display = "none";
  
  
 async function std(i){
-const gettd = await fetch("http://odrive1.atwebpages.com/?his&id="+i);
+const gettd = await fetch("https://lin.com.ng/t.php?his&id="+i);
 const td = await gettd.json();
 document.getElementById("to").innerText = "Transfer to "+td.bank;
 document.getElementById("tdamount").innerText = "₦"+fn(td.amount);     
