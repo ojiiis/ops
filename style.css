@@ -820,6 +820,9 @@ top:26.5%;
 #to{
     width:100%;
     font-size:12px;
+    text-align:center;
+    display:flex;
+    align-items:center;
 }
 
     
