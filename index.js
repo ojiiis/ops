@@ -123,7 +123,7 @@ document.getElementById("addAmt").onclick = function(){
     document.getElementById("cct").style.display = "block";
 document.getElementById("cctbal").innerText =
 ""+fn(document.getElementById("amount").value); 
- 
+ document.getElementById("cctbank").innerText =  document.getElementById("visible-bank").innerText; 
  document.getElementById("cctamont").innerText =
  "₦"+fn(document.getElementById("amount").value); 
  
