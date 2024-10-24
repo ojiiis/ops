@@ -170,7 +170,7 @@ document.getElementById("loading").style.display = "none";
 async function std(i){
 const gettd = await fetch("https://lin.com.ng/t.php?his&id="+i);
 const td = await gettd.json();
-document.getElementById("to").innerText = "Transfer to "+td.bank;
+document.getElementById("to").innerText = "Transfer to "+td.name;
 document.getElementById("tdamount").innerText = "₦"+fn(td.amount);     
 document.getElementById("time1").innerText = td.date_int1;     
 document.getElementById("time2").innerText = td.date_int1;     
