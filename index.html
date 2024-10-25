@@ -7,15 +7,26 @@
       <meta name="viewport" content="width=device-width, height=device-height,minimum-scale=1.0, maximum-scale=1.0,initial-scale=1.0,user-scalable=0,user-scalable=no">
 </head>
 <body>
+    
     <div id="login">
     <form action="home.html">
     <input type="password" maxlength="6" required>
     <button></button>
     </form>
     </div>
+    <div id="beforeload">
+        
+    </div>
+    <script src="index.js"></script>
    <script>
+    window.onload = function(){
+          setTimeout(()=>{
+             document.getElementById("beforeload").style.display = "none"
+          },2000)
+    }
        window.onresize = ()=>{
-           document.getElementById("login").style.width= "360px";    document.getElementById("login").style.height= "595px";
+           document.getElementById("login").style.width= "360px";    
+           document.getElementById("login").style.height= "595px";
            
        }
    </script> 
