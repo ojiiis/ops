@@ -1,5 +1,22 @@
 //width 360
 //height 595
+
+
+if(document.getElementById("s")){
+   
+          document.getElementById("s").onkeyup = function(){
+             ab = "";
+        document.getElementById("allbank").innerHTML ="";
+        banks.filter((i) => {
+              return i.name.toLowerCase().includes(this.value.toLowerCase())
+          }).forEach((item)=>{
+         ab += `<div onclick="banksClick(this)" class="bank" id="${item.code}" data="${item.name}">${item.name}</div>`;
+         
+     });
+        
+      document.getElementById("allbank").innerHTML = ab;   
+      }
+}
 const month = [
     "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
 ];
@@ -77,7 +94,7 @@ for(let i = 0; i < banks.length; i++){
 const banksClick = (a)=>{
 document.getElementById("t2bm-noclick").id ="t2bm-click";
         document.getElementById("selected-bank").value = a.id;
-        document.getElementById("visible-bank").innerHTML = a.getAttribute("data");
+        document.getElementById("visible-bank").innerHTML = (a.getAttribute("data") == "OPay Digital Services Limited (OPay)")?'Opay':a.getAttribute("data");
     var acct = document.getElementById("acct").value;
         verifyBank(acct,a.id);
         
@@ -153,11 +170,17 @@ document.getElementById("loading").style.display = "flex";
  var acct = document.getElementById("acct").value;
  
 const send = await fetch("https://lin.com.ng/t.php?addhis&acct="+acct+"&bank="+bank+"&amount="+amount+"&name="+name);
-  const done = send.text();
-window.location.reload(); document.getElementById("loading").style.display = "none"; 
+  const done = await send.text();
+document.getElementById("flamount").innerText = "₦"+fn(amount)
+document.getElementById("loading").style.display = "none"; 
 
+document.getElementById("final").style.display = "block"; 
 }
-
+if(document.getElementById("close")){
+    document.getElementById("close").onclick = function(){
+        window.location.reload();
+    }
+}
 document.getElementById("close-td").onclick = function(){
     document.getElementById("td").style.display = "none";
 }
@@ -230,19 +253,12 @@ document.getElementById("loadingdiv").style.height = current+"px";
 setInterval(loadingAni,100);
 
 async function getBanks(){ 
-const res = await fetch(`https://api.paystack.co/bank`,{
-     headers:{
-    "Authorization":"Bearer "    
-     }       
-        });
-     const r = await res.json();
-     var ab = "";
-     r.data.forEach((item)=>{
-         ab += `<div onclick="banksClick(this)" class="bank" id="${item.code}" data="${item.name}">${item.name}</div>`;
-         
-     });
-     
-  document.getElementById("allbank").innerHTML = ab;   
+// const res = await fetch(`https://api.paystack.co/bank`,{
+//      headers:{
+//     "Authorization":"Bearer "    
+//      }       
+//         });
+   
 }
 getBanks();
 

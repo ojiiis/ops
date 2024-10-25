@@ -58,7 +58,6 @@ button {
 #foot{
     width: 100vw;
     height: 10%;
-    background: ;
     position:fixed;
     left:0;
     bottom:0;
@@ -205,7 +204,6 @@ button {
 #loading div{
     width: 50px;
     height: 50px;
-    background: green;
     border-radius:50%;
     background-image: url("asset/img/icon.png");
     background-size: contain;
@@ -214,7 +212,7 @@ button {
 }
 
 
-#tm,#th,#td,#loading,#ct,#ct2,#cct{
+#tm,#th,#td,#loading,#ct,#ct2,#cct,#final{
     position:fixed;
     width: 100vw;
     height: 100vh;
@@ -224,6 +222,32 @@ button {
     z-index:99999;
    display: none;
 }
+#final-layer{
+    width: 100%;
+    height: 100%;
+        background-image: url("asset/img/final.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+}
+#final-layer #close{
+position: absolute;
+top: 5%;
+right:6%;
+width: 100px;
+background: red;
+}
+#final-layer #flamount {
+position: absolute;
+font-weight: bold;
+font-size: 25px;
+position: absolute;
+left:50%;
+transform: translate(-50%);
+top:24%;
+}
+
 #cct{
     background-image: url("asset/img/cct.jpg");
     background-size: contain;
@@ -239,7 +263,12 @@ button {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+   
+}
+#ct-layer{
+position: relative;
+width: 100%;
+height: 100%;
 }
 
 #ct2{
@@ -248,13 +277,12 @@ button {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
 }
-#ct #close-ct,#ct2 #close-ct{
+#ct  #ct-layer #close-ct,#ct2 #ct-layer #close-ct{
     top:3%;
     left:5%;
 }
-#ct input,#ct2 input{
+#ct #ct-layer input,#ct2 #ct-layer input{
     top:32%;
     left:16%;
 }

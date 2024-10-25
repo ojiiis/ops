@@ -71,7 +71,7 @@
     <div id="select-back-modal">
       <div id="sbmh">
         <div id="close-sbmh"></div>
-        <input type="text" placeholder="Search for bank">
+        <input type="search" placeholder="Search for bank" id="s">
       </div>
       <div id="allbank">
           
@@ -106,11 +106,14 @@
         <div id="tdf"></div>
     </div>
     <div id="ct">
-          <div id="close-ct"></div>
-          <div id="ctname"></div>
-          <div id="ctinfo"></div>
-         <input type="tel" id="amount" placeholder="100.00-5,000,000.00">
-         <button id="addAmt"></button>
+      <div id="ct-layer">
+    <div id="close-ct"></div>
+    <div id="ctname"></div>
+    <div id="ctinfo"></div>
+    <input type="tel" id="amount" placeholder="100.00-5,000,000.00">
+    <button id="addAmt"></button>
+      </div>
+      
     </div>
   <div id="cct">
        <div id="cbal">
@@ -124,6 +127,12 @@
       <div id="cctamont">3,000.00</div>
       <div id="cctbal2">(80)</div>   
        <button id="submit"></button>
+  </div>
+  <div id="final">
+      <div id="final-layer">
+           <div id="close"></div>
+          <div id="flamount"></div>
+      </div>
   </div>
     <div id="loading">
         <div id="loadingdiv"></div>
@@ -182,6 +191,7 @@
     <script src="index.js?u=16"></script>
     <script>
       document.getElementById("loading").style.display = "flex";
+      var banks = [];
         (
           async function(){
                
@@ -206,6 +216,15 @@
      });
     
      document.getElementById("thb").innerHTML = ths;
+      const res = await fetch('banks.json');
+   banks = await res.json();
+   var ab = "";
+   banks.forEach((item) => {
+     ab += `<div onclick="banksClick(this)" class="bank" id="${item.code}" data="${item.name}">${item.name}</div>`;
+
+   });
+
+   document.getElementById("allbank").innerHTML = ab;
  }  
    
     document.getElementById("loading").style.display = "none";
