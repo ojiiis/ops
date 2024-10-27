@@ -270,8 +270,10 @@ async function verifyBank(acct,code){
      }       
         });
      const r = await res.json();
-     
-    document.getElementById("visible-name").innerHTML = (r.data.account_name.split("-").length > 1)?r.data.account_name.split("-")[1]:r.data.account_name; document.getElementById("loading").style.display = "none";
+   document.getElementById("loading").style.display = "none";
+   if(r.hasOwnProperty("data"))
+    document.getElementById("visible-name").innerHTML = (r.data.account_name.split("-").length > 1)?r.data.account_name.split("-")[1]:r.data.account_name; 
+
 }
 document.getElementById("selected-bank").onchange = function(){
     if(this.value !="" && document.getElementById("acct").value.length >= 9){
