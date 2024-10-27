@@ -268,12 +268,14 @@ async function verifyBank(acct,code){
      headers:{
     "Authorization":"Bearer sk_test_834380bd84dca053fcb797ae85b6b3b131f7157e"    
      }       
-        });
+        }); 
      const r = await res.json();
    document.getElementById("loading").style.display = "none";
-   if(r.hasOwnProperty("data"))
+   if(r.hasOwnProperty("data")){
     document.getElementById("visible-name").innerHTML = (r.data.account_name.split("-").length > 1)?r.data.account_name.split("-")[1]:r.data.account_name; 
-
+}else{
+      window.location.reload();
+}
 }
 document.getElementById("selected-bank").onchange = function(){
     if(this.value !="" && document.getElementById("acct").value.length >= 9){
