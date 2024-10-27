@@ -1,6 +1,7 @@
 body{
     margin:0;
     padding:0;
+    width:100vw;
     height:100vh;
     font-family: arial;
     font-size:16px;
@@ -9,7 +10,7 @@ body{
     width: 100vw;
     height: 100vh;
     background-image: url("asset/img/before-load.png");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: fixed;
@@ -244,11 +245,11 @@ button {
 }
 #final-layer #close{
 position: absolute;
-top: 5%;
-right:6%;
+top: 4%;
+right:4%;
 width: 100px;
-height:50px;
-background: red;
+height:100px;
+background: ;
 }
 #final-layer #flamount {
 position: absolute;
